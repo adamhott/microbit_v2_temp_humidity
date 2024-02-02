@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "probe-rs-debug",
+        "request": "attach",
+        "name": "probe_rs Executable launch example",
+        "cwd": "${workspaceFolder}",
+        //!MODIFY (or remove)
+        "speed": 24000,
+        //!MODIFY
+        "chip": "nRF52833_xxAA",
+        "coreConfigs": [
+          {
+            "coreIndex": 0,
+            //!MODIFY
+            "programBinary": "/Users/adamh/Dev/microbit_v2_temp_humidity/target/thumbv7em-none-eabihf/debug/microbit_v2_temp_humidity",
+            //!MODIFY
+            "svdFile": "/Users/adamh/Dev/microbit_v2_temp_humidity/svd/nrf52833.svd"
+          }
+        ],
+        "env": {
+          //!MODIFY (or remove)
+          // If you set this variable, check the VSCode console log window for the location of the log file.
+          "RUST_LOG": "info"
+        },
+        // Info, Debug
+        "consoleLogLevel": "Console"
+      }
+    ]
+  }
